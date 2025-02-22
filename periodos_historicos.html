@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>História do Brasil</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        /* Resetando margens e paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo e fontes padrão */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #005c8e;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header .logo h1 {
+    font-size: 2.5em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 10px 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Seção principal */
+.main-content {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main-content h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+article {
+    margin-bottom: 30px;
+}
+
+article h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+article p {
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>História do Brasil</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home')}}">Início</a></li>
+                <li><a href="{{ url_for('periodos_historicos')}}">Períodos Históricos</a></li>
+                <li><a href="{{ url_for('figuras_historicas')}}">Figuras Importantes</a></li>
+                <li><a href="{{ url_for('curiosidades')}}">Curiosidades</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="main-content">
+        <h2>Períodos Históricos do Brasil</h2>
+        
+        <p>A história do Brasil pode ser dividida em vários períodos que marcaram o desenvolvimento político, econômico e social do país. Cada um desses períodos foi influenciado por uma série de eventos internos e externos. Abaixo estão os principais períodos históricos do Brasil:</p>
+    
+        <h3>Período Pré-Colonial (1500 - 1530)</h3>
+        <p>O <strong>Período Pré-Colonial</strong> começa com a chegada de Pedro Álvares Cabral em 1500 e vai até 1530. Durante este período, o Brasil era habitado por diversas etnias indígenas e foi visitado esporadicamente por exploradores portugueses. O contato entre os europeus e os indígenas resultou em trocas culturais, mas também na exploração das riquezas naturais, como o pau-brasil.</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Tribe_Indians.jpg/800px-Tribe_Indians.jpg" alt="Povos Indígenas" class="figure-img">
+        
+        <h3>Período Colonial (1530 - 1822)</h3>
+        <p>O <strong>Período Colonial</strong> vai de 1530, com a chegada das primeiras expedições de colonização portuguesa, até 1822, quando o Brasil se tornou independente. Durante este período, o Brasil foi dividido em capitanias hereditárias, e a economia colonial foi baseada na exploração do açúcar e do ouro, além do tráfico de escravizados africanos. O período também é marcado pela formação de uma sociedade colonial profundamente desigual, com a elite europeia e a grande maioria da população formada por indígenas e africanos escravizados.</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Sugar_cane_plantation_1842.jpg/800px-Sugar_cane_plantation_1842.jpg" alt="Plantação de Cana-de-Açúcar" class="figure-img">
+        
+        <h3>Período Imperial (1822 - 1889)</h3>
+        <p>O <strong>Período Imperial</strong> começa em 1822, com a independência do Brasil, proclamada por Dom Pedro I, e vai até 1889, quando a monarquia foi deposta e o Brasil se tornou uma república. Durante este período, o Brasil passou por uma série de mudanças importantes, incluindo a criação do império, a luta pela abolição da escravatura (que só aconteceu em 1888 com a Lei Áurea) e o desenvolvimento da economia cafeeira. O império também viveu momentos de instabilidade política, culminando com a Proclamação da República.</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Imperador_Dom_Pedro_I.jpg/800px-Imperador_Dom_Pedro_I.jpg" alt="Dom Pedro I" class="figure-img">
+        
+        <h3>Período Republicano (1889 - Atualidade)</h3>
+        <p>O <strong>Período Republicano</strong> começou com a Proclamação da República em 1889, quando o marechal Deodoro da Fonseca depôs a monarquia e estabeleceu um regime republicano no Brasil. Desde então, o Brasil passou por diversas mudanças de governo, incluindo períodos democráticos e ditaduras militares. O país passou por grandes transformações sociais, econômicas e políticas, como a industrialização, a urbanização, o avanço das políticas sociais e, mais recentemente, a redemocratização após o fim da ditadura militar em 1985. Atualmente, o Brasil é uma república democrática e federal.</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Deodoro_da_Fonseca%2C_1889.jpg/800px-Deodoro_da_Fonseca%2C_1889.jpg" alt="Proclamação da República" class="figure-img">
+    
+        <h3>Período Contemporâneo (1985 - Atualidade)</h3>
+        <p>O <strong>Período Contemporâneo</strong> começa com a redemocratização do Brasil em 1985, após o fim da ditadura militar. Esse período é caracterizado pela instalação de um regime democrático, com a promulgação da nova Constituição em 1988, e por avanços em áreas como educação, saúde, e economia, embora também tenha sido marcado por desafios econômicos, como a inflação, a crise financeira e problemas sociais. Nos últimos anos, o Brasil se tornou uma das principais economias do mundo, embora continue enfrentando desafios sociais e políticos.</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0a/Protesto_Brasil_2013.jpg" alt="Protestos no Brasil" class="figure-img">
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 História do Brasil. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

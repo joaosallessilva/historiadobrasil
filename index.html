@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>História do Brasil</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        /* Resetando margens e paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo e fontes padrão */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #005c8e;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header .logo h1 {
+    font-size: 2.5em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 10px 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Seção principal */
+.main-content {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main-content h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+article {
+    margin-bottom: 30px;
+}
+
+article h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+article p {
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>História do Brasil</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home')}}">Início</a></li>
+                <li><a href="{{ url_for('periodos_historicos')}}">Períodos Históricos</a></li>
+                <li><a href="{{ url_for('figuras_historicas')}}">Figuras Importantes</a></li>
+                <li><a href="{{ url_for('curiosidades')}}">Curiosidades</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="main-content">
+        <h2>O Descobrimento do Brasil</h2>
+        
+        <p>O <strong>Descobrimento do Brasil</strong> é um dos marcos mais importantes na história do país. Tradicionalmente datado de <strong>22 de abril de 1500</strong>, quando o navegador português <strong>Pedro Álvares Cabral</strong> e sua frota chegaram às terras que hoje correspondem ao Brasil. No entanto, a palavra "descobrimento" é controversa, já que o Brasil já era habitado por diversas nações indígenas antes da chegada dos europeus.</p>
+
+        <h3>O Contexto Histórico</h3>
+        <p>Na época, Portugal estava envolvido em expedições para expandir seus domínios e explorar novas rotas comerciais, principalmente para a Ásia. A viagem de Cabral tinha como objetivo seguir para a Índia, mas ele se desviou da rota e chegou ao Brasil, o que pode ser considerado uma descoberta acidental.</p>
+
+        <h3>A Chegada de Cabral</h3>
+        <p>Cabral e sua frota chegaram à costa brasileira, na região onde hoje é o estado da <strong>Bahia</strong>, inicialmente desembarcando em uma localidade chamada <strong>Porto Seguro</strong>, na atual cidade de <strong>Santa Cruz Cabrália</strong>. Os portugueses estabeleceram os primeiros contatos com os índios locais, os <strong>tupiniquins</strong>, que eram os habitantes da região. Esses encontros iniciais foram, em geral, pacíficos, com trocas comerciais e posteriormente, a colonização.</p>
+
+        <h3>O Tratado de Tordesilhas</h3>
+        <p>O <strong>Tratado de Tordesilhas</strong> foi um acordo assinado em 1494 entre Portugal e Espanha para dividir as terras do Novo Mundo. A linha de Tordesilhas passava pelo meio do Brasil, garantindo à Portugal o direito de colonizar a maior parte do território que hoje é o Brasil.</p>
+
+        <h3>O Impacto do Descobrimento</h3>
+        <p>O <strong>descobrimento</strong> do Brasil teve um impacto profundo, não só nas terras brasileiras, mas também em todo o contexto mundial. A chegada dos portugueses trouxe mudanças culturais, políticas e econômicas que marcaram o início do processo de colonização.</p>
+
+        <ul>
+            <li><strong>Colonização:</strong> Portugal iniciou a exploração e colonização do Brasil, que duraria mais de 300 anos.</li>
+            <li><strong>Exploração de Recursos Naturais:</strong> O Brasil foi inicialmente explorado por seus recursos naturais, como o <strong>pau-brasil</strong>, e pela exploração de mão de obra indígena e africana.</li>
+            <li><strong>Impacto nos Povos Indígenas:</strong> A chegada dos portugueses resultou em efeitos devastadores para as populações indígenas, com doenças, guerras e a perda de territórios.</li>
+            <li><strong>Formação da Colônia:</strong> O Brasil foi organizado em capitanias hereditárias, e mais tarde, uma administração centralizada foi estabelecida.</li>
+        </ul>
+
+        <h3>Controvérsias sobre o "Descobrimento"</h3>
+        <p>O termo "descobrimento" é frequentemente contestado, já que as terras já eram habitadas por diferentes povos indígenas com suas próprias culturas e histórias. Além disso, algumas expedições, como a de <strong>Vicente Yáñez Pinzón</strong>, chegaram ao Brasil antes de Cabral, mas sem deixar registros duradouros.</p>
+
+        <h3>Conclusão</h3>
+        <p>O <strong>Descobrimento do Brasil</strong> é um evento que simboliza o início de uma nova era para o país e o continente. Apesar de ser considerado o marco inicial da história do Brasil, ele representa apenas o começo de um processo de interações, explorações e transformações que daria origem ao Brasil moderno.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 História do Brasil. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

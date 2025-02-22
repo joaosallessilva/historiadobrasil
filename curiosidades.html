@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>História do Brasil</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        /* Resetando margens e paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo e fontes padrão */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #005c8e;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header .logo h1 {
+    font-size: 2.5em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 10px 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Seção principal */
+.main-content {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main-content h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+article {
+    margin-bottom: 30px;
+}
+
+article h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+article p {
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>História do Brasil</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home')}}">Início</a></li>
+                <li><a href="{{ url_for('periodos_historicos')}}">Períodos Históricos</a></li>
+                <li><a href="{{ url_for('figuras_historicas')}}">Figuras Importantes</a></li>
+                <li><a href="{{ url_for('curiosidades')}}">Curiosidades</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="main-content">
+        <h2>Curiosidades sobre o Brasil</h2>
+    
+        <p>O Brasil é um país rico em cultura, história e diversidade. Ao longo dos séculos, surgiram muitos fatos interessantes que fazem parte da identidade do país. Aqui estão algumas curiosidades sobre o Brasil que você provavelmente não sabia:</p>
+        
+        <h3>1. O Brasil tem o maior número de espécies de animais do mundo</h3>
+        <p>O Brasil é lar de uma incrível diversidade de fauna e flora. O país possui a maior biodiversidade do planeta, com mais de 10% das espécies conhecidas de plantas, animais e micro-organismos do mundo. A <strong>Amazônia</strong>, em particular, é um dos maiores ecossistemas do planeta e um tesouro natural único.</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Arara-Azul-Brasil.jpg/800px-Arara-Azul-Brasil.jpg" alt="Arara Azul" class="figure-img">
+        
+        <h3>2. O Brasil já foi o maior produtor de café do mundo</h3>
+        <p>Durante o século 19 e parte do século 20, o Brasil foi o maior produtor e exportador de café do mundo, com a produção predominando no estado de São Paulo. A economia brasileira na época estava fortemente ligada ao cultivo de café, que era a principal fonte de riqueza do país.</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Coffee_plantation_in_Brazil.jpg" alt="Plantação de Café" class="figure-img">
+        
+        <h3>3. O Brasil possui a maior festa popular do mundo</h3>
+        <p>O <strong>Carnaval</strong> brasileiro é considerado a maior festa popular do mundo. Todos os anos, milhões de pessoas, tanto no Brasil quanto no exterior, se reúnem para celebrar com desfiles, danças e festas. O evento é celebrado em todas as regiões do país, sendo especialmente famoso no Rio de Janeiro e em Salvador.</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Carnaval_Rio_2019_-_Samb%C3%B3dromo.JPG/800px-Carnaval_Rio_2019_-_Samb%C3%B3dromo.JPG" alt="Desfile de Carnaval" class="figure-img">
+        
+        <h3>4. O Brasil tem a maior comunidade de descendentes de japoneses fora do Japão</h3>
+        <p>A maior comunidade japonesa fora do Japão vive no Brasil, especialmente no estado de São Paulo. A imigração japonesa para o Brasil começou no início do século 20, e hoje a comunidade japonesa no Brasil é uma das mais influentes, com contribuições significativas para a cultura, a culinária e a economia do país.</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Japanese-brazilian_cultural_event.jpg/800px-Japanese-brazilian_cultural_event.jpg" alt="Evento cultural japonês no Brasil" class="figure-img">
+        
+        <h3>5. O Brasil é o único país a falar português na América</h3>
+        <p>Embora o Brasil esteja localizado na América Latina, a língua oficial do país é o <strong>português</strong>, enquanto todos os outros países da região falam espanhol. A razão para isso é a colonização portuguesa no século 16, enquanto o restante da América Latina foi colonizado por potências espanholas.</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Brazil_language_map.png/800px-Brazil_language_map.png" alt="Mapa de Línguas na América Latina" class="figure-img">
+        
+        <h3>6. O Brasil possui o maior número de títulos de Copa do Mundo de Futebol</h3>
+        <p>A <strong>Seleção Brasileira</strong> é a maior vencedora da história da <strong>Copa do Mundo de Futebol</strong>, com um total de cinco títulos (1958, 1962, 1970, 1994 e 2002). O Brasil é o país que mais exporta jogadores para clubes ao redor do mundo e tem uma enorme paixão pelo futebol.</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Sele%C3%A7%C3%A3o_Brasileira_Futebol_1970.jpg/800px-Sele%C3%A7%C3%A3o_Brasileira_Futebol_1970.jpg" alt="Seleção Brasileira de Futebol" class="figure-img">
+        
+        <h3>7. O Brasil é o maior produtor de música popular mundial</h3>
+        <p>O Brasil é mundialmente conhecido por sua música vibrante, e gêneros como <strong>samba, bossa nova, forró</strong> e <strong>MPB</strong> (Música Popular Brasileira) são apreciados em todo o mundo. Artistas como <strong>Tom Jobim, Gilberto Gil, Caetano Veloso</strong> e <strong>Carmen Miranda</strong> levaram a música brasileira a públicos internacionais.</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/Joao_Gilberto_%28cropped%29.jpg" alt="João Gilberto" class="figure-img">
+        
+        <h3>8. O Brasil é um dos países mais ricos em recursos naturais</h3>
+        <p>O Brasil possui uma enorme abundância de recursos naturais. É rico em minérios, petróleo, gás natural, florestas e terras agricultáveis. A Amazônia, em particular, é uma grande fonte de recursos naturais, além de ser fundamental para o equilíbrio ecológico global.</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Amazonas_Forest.jpg/800px-Amazonas_Forest.jpg" alt="Floresta Amazônica" class="figure-img">
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 História do Brasil. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
